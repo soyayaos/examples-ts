@@ -1,0 +1,35 @@
+{
+    "ts-node": {
+        "transpileOnly": true,
+        "require": []
+    },
+    "compilerOptions": {
+        "baseUrl": ".",
+        "declaration": true,
+        "declarationMap": true,
+        "experimentalDecorators": true,
+        "esModuleInterop": true,
+        "forceConsistentCasingInFileNames": true,
+        "lib": [
+            "es2021",
+            "dom"
+        ],
+        "module": "commonjs",
+        "moduleResolution": "node",
+        "outDir": "./out/tsc_default_es2021",
+        "plugins": [
+            {
+                "name": "typescript-styled-plugin"
+            }
+        ],
+        "resolveJsonModule": true,
+        "skipLibCheck": true,
+        "sourceMap": true,
+        "strict": true,
+        "strictNullChecks": true,
+        "target": "es2021"
+    },
+    "include": [
+        "src"
+    ]
+}

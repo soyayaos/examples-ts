@@ -1,0 +1,37 @@
+{
+  "name": "examples-ts",
+  "version": "24.1.7-10.48",
+  "description": "",
+  "scripts": {
+    "build:esbuild:es2021": "esbuild `find src \\( -name '*.ts' ! -name '*.test.ts' \\)` --sourcemap --target=es2021 --minify --outdir=out/esbuild_es2021/",
+    "build:esbuild:es2021:bundle": "esbuild src/index.ts --sourcemap --target=es2021 --bundle --minify --outfile=out/esbuild_es2021_bundle/app.min.js",
+    "build:tsc:default:es2021": "tsc --project tsconfig.default.es2021.json",
+    "clean": "rm -rf out/",
+    "exec:iterator1": "ts-node src/iterator1.ts",
+    "test:ava:all": "ava --serial --fail-fast"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^20.10.6",
+    "@typescript-eslint/eslint-plugin": "^6.16.0",
+    "@typescript-eslint/parser": "^6.16.0",
+    "ava": "^6.0.1",
+    "esbuild": "^0.19.11",
+    "eslint": "^8.56.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.29.1",
+    "ts-node": "^10.9.2",
+    "tsx": "^4.7.0",
+    "typescript": "^5.3.3"
+  },
+  "ava": {
+    "extensions": {
+      "ts": "module"
+    },
+    "nodeArguments": [
+      "--loader=tsx"
+    ]
+  }
+}
